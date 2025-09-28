@@ -13,9 +13,9 @@ let userEmail;
 
 const id = Symbol('123')
 const anotherId = Symbol('123')
-console.log(id)
-console.log(anotherId)
-console.log(id === anotherId)
+// console.log(id)
+// console.log(anotherId)
+// console.log(id === anotherId)
 
 // Reference (Non primitive)
 
@@ -28,8 +28,8 @@ let myObj = {
     name:"hitesh",
     age:22
 }
-console.log(heros)
-console.log(myObj)
+// console.log(heros)
+// console.log(myObj)
 
 const myFunction = function(){
     console.log("Heloo World")
@@ -37,4 +37,29 @@ const myFunction = function(){
 
 myFunction()
 
-console.log(typeof myFunction)
+//console.log(typeof myFunction)
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack Memory - (use in Primitive datatype) 
+// Heap memory - (use in Non Primitive datatype)
+
+let myName = "Anmol"
+let anotherName = myName
+
+console.log(anotherName)
+
+anotherName = "Mishra";
+console.log(myName)
+
+let useone = {
+    email:"anmolmishra56113@gmail.com",
+    name:"Anmol"
+}
+
+let usertwo = useone;
+usertwo.email = "mishra@gmail.com"
+usertwo.name = "Adarsh"
+
+console.log(useone)
