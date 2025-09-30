@@ -42,11 +42,25 @@ const user = [
 ]
 
 // how to evalue all key and values of an object
-console.log(Object.keys(tinderUser))
-console.log(Object.values(tinderUser))
+// console.log(Object.keys(tinderUser))
+// console.log(Object.values(tinderUser))
 
-// all entries of an object
-console.log(Object.entries(tinderUser))
+// // all entries of an object
+// console.log(Object.entries(tinderUser))
 
 // we can ask the object that they have some keys or not
-console.log(tinderUser.hasOwnProperty('isLogged'))
+//console.log(tinderUser.hasOwnProperty('isLogged'))
+
+
+// ++++++++++++ Destructuring +++++++++++++++++
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor:"Anmol"
+}
+
+const {courseInstructor: instructor}  = course
+
+
+console.log(instructor)
