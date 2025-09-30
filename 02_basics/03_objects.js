@@ -34,3 +34,6 @@ JsUser.greetingTwo = function() {
 
 console.log(JsUser.greeting())
 JsUser.greetingTwo()
+
+
+// literals se agar defined karo ge tho singleton nahi hoga object
