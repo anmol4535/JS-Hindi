@@ -35,3 +35,65 @@ buttons.forEach(function (button) {
   });
 });
 ```
+
+# Project 5 Solution
+
+```javascript
+const insert = document.querySelector('#insert');
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+  <div class='color'>
+  <table>
+  <tr>
+    <th>key</th>
+    <th>keyboard</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>${e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  
+</table>
+  </div>
+  
+
+  `;
+});
+
+```
+
+# Project 6 Solution
+
+```javascript
+// generate a random hexa color
+
+let randomColor = function generateColor() {
+  let col = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += col[Math.floor(Math.random() * 16)];
+  }
+
+  return color;
+};
+
+console.log(randomColor());
+let intervalId;
+const changeBgColor = function () {
+  if (!intervalId) intervalId = setInterval(change, 1000);
+  function change() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+const stopBgColor = function () {
+  clearInterval(intervalId);
+  //intervalId = null;
+};
+
+document.querySelector('#start').addEventListener('click', changeBgColor);
+document.querySelector('#stop').addEventListener('click', stopBgColor);
+
+
+```
